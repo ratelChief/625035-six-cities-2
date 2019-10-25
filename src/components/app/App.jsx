@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export const App = (props) => {
-  const {offers} = props;
+  const {offers, clickHandler} = props;
   return (
     <div className="page page--gray page--main">
-      <header className="header">
+      <header className="header" onClick={clickHandler}>
         <div className="container">
           <div className="header__wrapper">
             <div className="header__left">
@@ -307,7 +307,8 @@ export const App = (props) => {
 };
 
 App.propTypes = {
-  offers: PropTypes.arrayOf(PropTypes.string).isRequired
+  offers: PropTypes.arrayOf(PropTypes.string).isRequired,
+  clickHandler: PropTypes.func.isRequired,
 };
 
 export default App;
