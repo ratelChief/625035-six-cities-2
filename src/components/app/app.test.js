@@ -1,20 +1,13 @@
 import React from 'react';
-import App from './App';
+import App from './app';
 import renderer from 'react-test-renderer';
 
 it(`App to be rendered correctly`, () => {
-  const settings = {
-    offers: [
-      `Beautiful & luxurious apartment at great location`,
-      `Wood and stone place`,
-      `Canal View Prinsengracht`,
-      `Nice, cozy, warm big bed apartament`
-    ]
-  };
+  const offers = [];
 
   const app = renderer.create(
       <App
-        offers={settings.offers}
+        offers={offers}
       />
   );
 
